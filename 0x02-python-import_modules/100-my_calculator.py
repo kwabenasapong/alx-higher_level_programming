@@ -5,14 +5,14 @@ if __name__ == "__main__":
     from sys import argv
 
 
-# variables for initialization    
+# variables for initialization
     error_arg_msg = 'Usage: ./100-my_calculator.py <a> <operator> <b>'
     error_opr_msg = 'Unknown operator. Available operators: +, -, * and /'
-    opr = ['+', '-', '*', '/']
+    opr = ["+", "-", "*", "/"]
 
- # Initial Conditions for calculator to work
+# Initial Conditions for calculator to work
     num_args = len(argv)
-    if num_args != 3:
+    if num_args != 4:
         print(error_arg_msg)
         exit(1)
 
