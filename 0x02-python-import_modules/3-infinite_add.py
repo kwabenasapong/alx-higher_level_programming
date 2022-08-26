@@ -9,6 +9,7 @@ def count_args(str):
     return count
 '''
 
+
 def sum_args(str):
     sum = 0
     for arg in range(len(str)):
@@ -30,5 +31,5 @@ if __name__ == "__main__":
         message = 'arguments:'
     '''
 
-    #print("{0:d} {1:s}".format(num_args, message))
+    # print("{0:d} {1:s}".format(num_args, message))
     print(sum_args(argv))
