@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+'''
+a function that prints a matrix of integers
+'''
+
+
+def print_matrix_integer(matrix=[[]]):
+    num = len(matrix)
+    i = 0
+    while i < num:
+        for m in matrix[i]:
+            print('{:d}'.format(m), end=' ')
+        i = i + 1
+        print('')
