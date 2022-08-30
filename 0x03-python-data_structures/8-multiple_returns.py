@@ -6,7 +6,10 @@ length of a string and its first character
 
 
 def multiple_returns(sentence):
-    t_sen = tuple(sentence)
-    length = len(t_sen)
-    first = t_sen[0]
-    return length, first
+    if sentence == ''
+        return 0, None
+    else:
+        t_sen = tuple(sentence)
+        length = len(t_sen)
+        first = t_sen[0]
+        return length, first
