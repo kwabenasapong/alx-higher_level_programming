@@ -15,4 +15,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         b = (b[0], 0)
     elif len(b) == 0:
         b = (0, 0)
-    print("({0}, {1})". format((a[0] + b[0]), a[1] + b[1]))
+    return ("({0}, {1})". format((a[0] + b[0]), a[1] + b[1]))
