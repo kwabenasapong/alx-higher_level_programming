@@ -9,6 +9,7 @@ def print_matrix_integer(matrix=[[]]):
     i = 0
     while i < num:
         for m in matrix[i]:
-            print('{:d}'.format(m), end=' ')
+            end = " " if m != matrix[i][-1] else ""
+            print('{:d}'.format(m), end=end)
         i = i + 1
         print('')
