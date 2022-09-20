@@ -14,7 +14,6 @@ class Square:
             param1 (size): private instance attribute
         '''
 
-
         if not type(size) is int:
             message_1 = "size must be an integer"
             raise TypeError(message_1)
