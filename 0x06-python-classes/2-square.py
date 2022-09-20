@@ -18,7 +18,7 @@ class Square:
             message_1 = "size must be an integer"
             raise TypeError(message_1)
         if size < 0:
-            message_2 = "size must be >=0"
+            message_2 = "size must be >= 0"
             raise ValueError(message_2)
 
         self.__size = size
