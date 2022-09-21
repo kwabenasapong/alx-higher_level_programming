@@ -73,6 +73,5 @@ class Rectangle:
         '''for parsing and printing the rectangle class'''
         return 'Rectangle({}, {})'.format(self.__width, self.__height)
 
-
     def __del__(self):
         print('Bye rectangle...')
