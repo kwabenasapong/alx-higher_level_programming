@@ -60,7 +60,7 @@ class Rectangle:
     def __str__(self):
         '''for printing the rectangle class'''
         if self.__height == 0 or self.__width == 0:
-            return 0
+            return ''
         else:
             k = ''
             for h in range(self.__height):
