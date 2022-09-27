@@ -11,16 +11,13 @@ class Rectangle(BaseGeometry):
     from the BaseGeometry class
     '''
 
-    name_width = 'Width'
-    name_height = 'Height'
-
     def __init__(self, width, height):
         '''initialize class
         args:
             param1 (width): size of one side
             param2 (height): size of another side
         '''
-        super().integer_validator(Rectangle.name_width, width)
-        super().integer_validator(Rectangle.name_height, height)
+        super().integer_validator("Width", width)
+        super().integer_validator("Height", height)
         self.__width = width
         self.__height = height
