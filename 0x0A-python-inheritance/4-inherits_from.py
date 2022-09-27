@@ -9,7 +9,7 @@ def inherits_from(obj, a_class):
     or indirectly) from, the specified class ;
     otherwise False.
     '''
-    if not type(obj) is a_class or issubclass(type(obj), a_class):
+    if not type(obj) is a_class and issubclass(type(obj), a_class):
         return True
     else:
         return False
