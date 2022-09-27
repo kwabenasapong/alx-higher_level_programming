@@ -1,0 +1,65 @@
+The ``1-my_list`` module
+============================
+
+Using ``MyList``
+---------------------
+
+This subclass of list will return an ascending order sorted list
+of integers. First import ``add_integer`` from the ``1-my_list`
+
+>>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+       
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+	>>> a = MyList()
+	>>> a.append(-1)
+	>>> a.append(3)
+	>>> a.append(-100)
+	>>> a.append(234)
+	>>> a.append(-17)
+	>>> a.append(0)
+	>>> a
+	[-1, 3, -100, 234, -17, 0]
+	>>> a.print_sorted()
+	[-100, -17, -1, 0, 3, 234]
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list
+	[]
+
+	>>> b = MyList()
+	>>> b.print_sorted()
+	[]
+
+
+Exceptions:
+
+	>>> a = [2,4,1,0,-1]
+	>>> a.print_sorted()
+	Traceback (most recent call last):
+	AttributeError: 'list' object has no attribute 'print_sorted'
+
+
+	>>> b = MyList()
+	>>> b.append(None)
+	>>> b.append(0)
+	>>> b.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'int' and 'NoneType'
+
+
+
