@@ -12,7 +12,6 @@ class Rectangle(BaseGeometry):
     name_width = 'Width'
     name_height = 'Height'
 
-
     def __init__(self, width, height):
         '''initialize class'''
         self.__width = width
