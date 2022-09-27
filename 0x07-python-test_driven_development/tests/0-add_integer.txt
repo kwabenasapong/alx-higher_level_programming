@@ -1,0 +1,33 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+This function will add only two integers or floats and return
+an integer. First import ``add_integer`` from the ``0-add_integer`` module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+	>>> add_integer(1, 2)
+	3
+
+it works for float type too:
+
+	>>> add_integer(3.5, 4.7)
+	7
+
+Exceptions:
+	>>> print(add_integer('a', 2))
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> print(add_integer(4, "School"))
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> print(add_integer(None))
+	Traceback (most recent call last):
+	TypeError: a must be an integer
