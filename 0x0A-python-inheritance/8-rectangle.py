@@ -13,9 +13,12 @@ class Rectangle(BaseGeometry):
     name_height = 'Height'
 
     def __init__(self, width, height):
-        '''initialize class'''
+        '''initialize class
+        args:
+            param1 (width): size of one side
+            param2 (height): size of another side
+        '''
+        super().integer_validator(Rectangle.name_width, width)
+        super().integer_validator(Rectangle.name_height, height)
         self.__width = width
         self.__height = height
-
-        super().integer_validator(Rectangle.name_width, self.__width)
-        super().integer_validator(Rectangle.name_height, self.__height)
