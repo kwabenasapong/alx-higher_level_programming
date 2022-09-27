@@ -17,7 +17,7 @@ class Rectangle(BaseGeometry):
             param1 (width): size of one side
             param2 (height): size of another side
         '''
-        super().integer_validator("Width", width)
-        super().integer_validator("Height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
