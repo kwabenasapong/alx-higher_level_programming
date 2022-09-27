@@ -5,7 +5,6 @@
 class MyList(list):
     '''Inherits from base class list'''
 
-
     def print_sorted(self):
         '''
         Public instance method:
