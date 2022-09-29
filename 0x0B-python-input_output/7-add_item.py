@@ -41,4 +41,3 @@ if __name__ == "__main__":
             py_list.append(argv[i])
     save_to_json_file(py_list, "add_item.json")
     py_list = load_from_json_file("add_item.json")
-    print(py_list)
