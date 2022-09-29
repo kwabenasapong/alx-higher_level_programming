@@ -34,10 +34,13 @@ if __name__ == "__main__":
         py_list = load_from_json_file("add_item.json")
     except (FileNotFoundError):
         py_list = create_file()
-
+    print('Cycle check-> {}'.format(py_list))
     py_list = load_from_json_file("add_item.json")
     for i in range(len(argv)):
         if i != 0:
+            print('Check 1-> {}'.format(py_list))
             py_list.append(argv[i])
+            print('Check 2-> {}'.format(py_list))
     save_to_json_file(py_list, "add_item.json")
     py_list = load_from_json_file("add_item.json")
+    print('final check-> {}'.format(py_list))
