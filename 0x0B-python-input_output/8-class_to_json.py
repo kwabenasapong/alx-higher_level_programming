@@ -8,4 +8,4 @@ def class_to_json(obj):
     description with simple data
     structure
     '''
-    return (type(obj))
+    return obj.__dict__
