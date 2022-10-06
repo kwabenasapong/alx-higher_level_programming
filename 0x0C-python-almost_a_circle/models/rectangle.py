@@ -73,3 +73,22 @@ class Rectangle(Base):
     def area(self):
         '''area of base'''
         return self.__width * self.__height
+
+    def display(self):
+        '''Displays rectangle in # format'''
+        if self.__height == 0 or self.__width == 0:
+            print()
+        else:
+            for h in range(self.height):
+                print('{}'.format(' '), end='')
+                for w in range(self.width):
+                    print('#', end='')
+                print()
+
+    def __str__(self):
+        '''print message'''
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+
+
+
