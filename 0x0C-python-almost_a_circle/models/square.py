@@ -13,8 +13,8 @@ class Square(Rectangle):
 
     def __str__(self):
         '''print message'''
-        return '[Square] ({}) {}/{} - {}/{}'\
-            .format(self.id, self.x, self.y, self.width, self.height)
+        return '[Square] ({}) {}/{} - {}'\
+            .format(self.id, self.x, self.y, self.size)
 
     @property
     def size(self):
@@ -44,3 +44,12 @@ class Square(Rectangle):
             for k in kwargs.keys():
                 if k in keys:
                     setattr(self, k, kwargs[k])
+
+    def to_dictionary(self):
+        '''returns dict rep of class'''
+        return {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+            }
