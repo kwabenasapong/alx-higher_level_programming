@@ -79,16 +79,19 @@ class Rectangle(Base):
         if self.__height == 0 or self.__width == 0:
             print()
         else:
+            if self.__y > 0:
+                for line in range(self.__y):
+                    print()
+
             for h in range(self.height):
                 print('{}'.format(' '), end='')
+                if self.__x > 0:
+                    print('{}'.format(' ' * self.__x), end='')
                 for w in range(self.width):
                     print('#', end='')
                 print()
 
     def __str__(self):
         '''print message'''
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
-
-
-
-
+        return '[Rectangle] ({}) {}/{} - {}/{}'\
+    .format(self.id, self.__x, self.__y, self.__width, self.__height)
