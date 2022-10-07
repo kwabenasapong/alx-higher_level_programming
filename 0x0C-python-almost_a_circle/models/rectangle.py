@@ -114,3 +114,7 @@ class Rectangle(Base):
             for k in kwargs.keys():
                 if k in keys:
                     setattr(self, k, kwargs[k])
+
+    def to_dictionary(self):
+        '''returns dict rep of class'''
+        return self.__dict__
