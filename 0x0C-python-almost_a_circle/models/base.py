@@ -4,6 +4,7 @@ import json
 import csv
 import turtle
 
+
 class Base:
     '''Base Class'''
     __nb_objects = 0
