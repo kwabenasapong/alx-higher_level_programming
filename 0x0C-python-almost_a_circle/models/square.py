@@ -27,20 +27,20 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-def update(self, *args, **kwargs):
-    '''for updating all initialised args'''
-    if args is not None and len(args) != 0:
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[0]
-            elif i == 1:
-                self.size = args[1]
-            elif i == 2:
-                self.x = args[2]
-            else:
-                self.y = args[3]
-    else:
-        keys = ['size', 'x', 'y', 'id']
-        for k in kwargs.keys():
-            if k in keys:
-                setattr(self, k, kwargs[k])
+    def update(self, *args, **kwargs):
+        '''for updating all initialised args'''
+        if args is not None and len(args) != 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                elif i == 1:
+                    self.size = args[1]
+                elif i == 2:
+                    self.x = args[2]
+                else:
+                    self.y = args[3]
+        else:
+            keys = ['size', 'x', 'y', 'id']
+            for k in kwargs.keys():
+                if k in keys:
+                    setattr(self, k, kwargs[k])
