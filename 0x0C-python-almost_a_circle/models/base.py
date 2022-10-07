@@ -36,7 +36,29 @@ class Base:
 
     def from_json_string(json_string):
         '''returns the list of json string rep json_string'''
-        if json_string is not None or json_string != 0:
+        if json_string is not None or json_string != []:
             return json.loads(json_string)
         else:
+            return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''returns and instance with all attrs set'''
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
+
+    @classmethod
+    def load_from_file(cls):
+        '''returns list of classes for json file'''
+        filename = str(cls.__name__) + '.json'
+        try:
+            with open(filename, 'r') as f:
+                list_dict = Base.from_json_string(f.read())
+                return [cls.create(**d) for d in list_dict]
+        except IOError:
             return []
