@@ -84,7 +84,6 @@ class Rectangle(Base):
                     print()
 
             for h in range(self.height):
-                print('{}'.format(' '), end='')
                 if self.__x > 0:
                     print('{}'.format(' ' * self.__x), end='')
                 for w in range(self.width):
