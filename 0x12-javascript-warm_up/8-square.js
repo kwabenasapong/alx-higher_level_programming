@@ -19,7 +19,7 @@ if (process.argv.length <= 2 || checkArg(process.argv[2], 10) === 0) {
   let pattern = '';
   while (i < x) {
     while (j < x) {
-      pattern += 'x';
+      pattern += 'X';
       j++;
     }
     console.log(pattern);
