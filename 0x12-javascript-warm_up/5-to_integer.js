@@ -18,5 +18,5 @@ if (checkArg(process.argv[2], 10) === 0) {
   console.log('Not a number');
   process.exit(1);
 } else {
-  console.log(checkArg(process.argv[2], 10));
+  console.log('My number:', checkArg(process.argv[2], 10));
 }
