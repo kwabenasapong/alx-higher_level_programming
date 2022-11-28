@@ -9,12 +9,7 @@ function checkArg (x, base) {
   return number;
 }
 
-if (process.argv.length <= 2) {
-  console.log('Missing number of occurrences');
-  process.exit(1);
-}
-
-if (checkArg(process.argv[2], 10) === 0) {
+if (process.argv.length <= 2 || checkArg(process.argv[2], 10) === 0) {
   console.log('Missing number of occurrences');
   process.exit(1);
 } else {
