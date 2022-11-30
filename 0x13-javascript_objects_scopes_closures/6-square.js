@@ -10,7 +10,7 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (C === undefined) {
+    if (c === undefined) {
       return super.print();
     } else {
       for (let i = 0; i < this.height; i++) {
