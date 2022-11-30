@@ -9,7 +9,7 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  charPrint (C) {
+  charPrint (c) {
     if (C === undefined) {
       return super.print();
     } else {
