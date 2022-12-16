@@ -1,18 +1,24 @@
 #!/usr/bin/python3
+"""
+Module for fetching the status of https://alx-intranet.hbtn.io/status
+"""
 
-# Import the required module
 import urllib.request
 
-# Set the URL to fetch
-url = "https://alx-intranet.hbtn.io/status"
 
-# Use the urlopen function to fetch the URL
-with urllib.request.urlopen(url) as response:
-    # Read the response data
-    data = response.read()
+def get_status():
+    """
+    Fetches the status of https://alx-intranet.hbtn.io/status
+    and returns the body of the response as a bytes object
+    """
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as url:
+        return url.read()
 
-    # Print the response information
+
+if __name__ == "__main__":
+    # Get the status and print the body of the response
+    status = get_status()
     print("Body response:")
-    print("\t- type:", type(data))
-    print("\t- content:", data)
-    print("\t- utf8 content:", data.decode("utf-8"))
+    print("\t- type:", type(status))
+    print("\t- content:", status)
+    print("\t- utf8 content:", status.decode('utf-8'))
