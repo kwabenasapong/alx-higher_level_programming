@@ -8,21 +8,23 @@ import urllib.parse
 import sys
 
 
-def post_data():
+def post_data(url, email):
     '''
     function to post data to a given url
     '''
-    url = sys.argv[1]
-    data = {'email': sys.argv[2]}
+    url = url
+    data = {'email': email}
 
     data = urllib.parse.urlencode(data).encode('ascii')
 
     req = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(req) as response:
-        email_info = response.read('email').decode('utf-8')
+        email_info = response.read().decode('utf-8')
     print(email_info)
 
 
 if __name__ == "__main__":
-    post_data()
+    url = sys.argv[1]
+    email = sys.argv[2]
+    post_data(url, email)
