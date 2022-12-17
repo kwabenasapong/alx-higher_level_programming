@@ -20,7 +20,7 @@ def post_data():
     req = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(req) as response:
-        email_info = response.get('email').decode('utf-8')
+        email_info = response.read('email').decode('utf-8')
     print(email_info)
 
 
