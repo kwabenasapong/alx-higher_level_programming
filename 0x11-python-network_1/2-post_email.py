@@ -15,13 +15,13 @@ def post_data():
     url = sys.argv[1]
     data = {'email': sys.argv[2]}
 
-    data = urllib.parse.urlencode(data).encode('utf-8')
+    data = urllib.parse.urlencode(data).encode('ascii')
 
     req = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(req) as response:
-        email_info = response.get('email')
-    print("Your email is: {}".format(email_info))
+        email_info = response.get('email').decode('utf-8')
+    print(email_info)
 
 
 if __name__ == "__main__":
